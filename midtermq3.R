@@ -2,9 +2,9 @@
 brfss2017 <- read_csv('https://raw.githubusercontent.com/kijohnson/ADA_Spring_2019/master/BRFSS2017_10percent_v2.csv')
 
 #finding median height for males and females
-G
-summary(brfss2017$ht_meters[brfss2017$sex == 'Male'])
-summary(brfss2017$ht_meters[brfss2017$sex == 'Female'])
+
+median(brfss2017$ht_meters[brfss2017$sex == 'Male'], na.rm = TRUE)
+median(brfss2017$ht_meters[brfss2017$sex == 'Female'], na.rm = TRUE)
 
 #making graph of median height for males and females
 male.female.height <- brfss2017 %>% 
